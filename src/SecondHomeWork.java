@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class SecondHomeWork {
     public static void main(String[] args) {
-            Match match = new Match();
-        System.out.println(match.pariMatch(22,22,11,10));
+        Romb romb = new Romb();
+        romb.rombikusik(10);
     }
 }
 class Match{
@@ -14,6 +16,22 @@ class Match{
             return 1;
         }else{
             return 0;
+        }
+    }
+}
+class Romb {
+    public void rombikusik(int diamondLength){
+        String stroka;
+        String stroka1;
+        for (int i =1;i<diamondLength;i++){
+            stroka = new String(new char[diamondLength - i]).replace("\0"," ");
+            stroka1 = new String(new char[2*i]).replace("\0","*");
+            System.out.println(stroka + stroka1);
+        }
+        for (int i =diamondLength;i!=0;i--){
+            stroka = new String(new char[diamondLength - i]).replace("\0"," ");
+            stroka1 = new String(new char[2*i]).replace("\0","*");
+            System.out.println(stroka + stroka1);
         }
     }
 }
