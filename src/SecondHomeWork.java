@@ -1,8 +1,7 @@
 public class SecondHomeWork {
     public static void main(String[] args) {
-        Factorial f = new Factorial();
-        System.out.println(f.fact(6));
-
+        Finobichi finobichi = new Finobichi();
+        finobichi.chislo(10);
     }
 }
 class Match{// _____________________1.1___________________________________
@@ -18,7 +17,7 @@ class Match{// _____________________1.1___________________________________
         }
     }
 }
-class Romb {//________________________________________1.2_________________________--
+class Romb {//________________________________________1.2_________________________
     public void rombikusik(int diamondLength){
         String stroka;
         String stroka1;
@@ -34,14 +33,38 @@ class Romb {//________________________________________1.2_______________________
         }
     }
 }
+class VozvedenieV{//_______________________________________1.3______________________________
+    public int stepen(int chislo,int vKakuyu){
+        for (int i =0;i<vKakuyu;i++){
+            chislo *= chislo;
+        }
+        return chislo;
+    }
+}
 class Factorial {//_____________________________________1.4_____________________________
-
     int fact(int n) {
         int result;
-
         if (n == 1)
             return 1;
         result = fact(n - 1) * n;
         return result;
+    }
+}
+class Finobichi{
+    int n0 = 0;
+    int n1 = 1;
+    int n2;
+    public int chislo(int doScolki){
+        if (doScolki ==0){
+            return 0;
+        }else{
+            n2=n0 + n1;
+            n0 = n1;
+            n1 = n2;
+            doScolki -=1;
+            System.out.println(n2);
+            chislo(doScolki);
+            return n2;
+        }
     }
 }
