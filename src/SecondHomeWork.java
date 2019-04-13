@@ -1,12 +1,11 @@
-import java.util.Scanner;
-
 public class SecondHomeWork {
     public static void main(String[] args) {
-        Romb romb = new Romb();
-        romb.rombikusik(10);
+        Factorial f = new Factorial();
+        System.out.println(f.fact(3));
+
     }
 }
-class Match{
+class Match{// _____________________1.1___________________________________
     public int pariMatch(int schetPervoy,int schetVtoroy, int stavkaNaPervuy, int stavkaNaVtoruy){
         int x =(schetPervoy == stavkaNaPervuy && schetVtoroy== stavkaNaVtoruy) ? 2: 0;
         int y =(schetPervoy > schetVtoroy && stavkaNaPervuy > stavkaNaVtoruy || schetPervoy < schetVtoroy && stavkaNaPervuy < stavkaNaVtoruy || schetPervoy == schetVtoroy && stavkaNaPervuy== stavkaNaVtoruy) ? 1: 0;
@@ -19,7 +18,7 @@ class Match{
         }
     }
 }
-class Romb {
+class Romb {//________________________________________1.2_________________________--
     public void rombikusik(int diamondLength){
         String stroka;
         String stroka1;
@@ -33,5 +32,15 @@ class Romb {
             stroka1 = new String(new char[2*i]).replace("\0","*");
             System.out.println(stroka + stroka1);
         }
+    }
+}
+class Factorial {//_____________________________________1.4_____________________________
+    int fact(int n) {
+        int result;
+
+        if (n == 1)
+            return 1;
+        result = fact(n - 1) * n;
+        return result;
     }
 }
