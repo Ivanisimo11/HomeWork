@@ -1,6 +1,7 @@
 package SecondHomeWork;
 
 public class Romb {//________________________________________1.2_________________________
+
     public void rombikusik(int diamondLength){
         String stroka;
         String stroka1;
