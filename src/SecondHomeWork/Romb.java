@@ -16,3 +16,10 @@ public class Romb {//________________________________________1.2________________
         }
     }
 }
+class Main4{
+    public static void main(String[] args) {
+        Romb bmor = new Romb();
+        bmor.rombikusik(10);
+        bmor.rombikusik(3);
+    }
+}

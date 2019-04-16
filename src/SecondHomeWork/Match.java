@@ -13,3 +13,12 @@ public class Match{// _____________________1.1__________________________________
         }
     }
 }
+class Main3{
+    public static void main(String[] args) {
+        Match match = new Match();
+        System.out.println(match.pariMatch(3,4,3,4));
+        System.out.println(match.pariMatch(5,6,3,4));
+        System.out.println(match.pariMatch(1,1,3,4));
+        System.out.println(match.pariMatch(3,4,3,1));
+    }
+}
