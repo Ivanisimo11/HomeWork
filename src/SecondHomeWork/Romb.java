@@ -1,26 +1,27 @@
 package SecondHomeWork;
 
-public class Romb {//________________________________________1.2_________________________
-
+public class Romb {//________________________________________1.2___________________________________________
     public void rombikusik(int diamondLength){
-        String stroka;
-        String stroka1;
+        StringBuilder sb = new StringBuilder();
+        int n = 1;
         for (int i =1;i<diamondLength;i++){
-            stroka = new String(new char[diamondLength - i]).replace("\0"," ");
-            stroka1 = new String(new char[2*i]).replace("\0","*");
-            System.out.println(stroka + stroka1);
+            sb.append(new String(new char[diamondLength-i]).replace("\0"," "));
+            sb.append(new String(new char[n]).replace("\0","*"));
+            sb.append(new String("\n"));
+            n=n+2;
         }
-        for (int i =diamondLength;i!=0;i--){
-            stroka = new String(new char[diamondLength - i]).replace("\0"," ");
-            stroka1 = new String(new char[2*i]).replace("\0","*");
-            System.out.println(stroka + stroka1);
+        int a = 1;
+        for (int i = diamondLength;i>0;i=i-2,a++){
+            sb.append(new String(new char[a+1]).replace("\0"," "));
+            sb.append(new String(new char[i]).replace("\0","*"));
+            sb.append(new String("\n"));
         }
+        System.out.println(sb.toString());
     }
 }
 class Main4{
     public static void main(String[] args) {
         Romb bmor = new Romb();
-        bmor.rombikusik(10);
-        bmor.rombikusik(3);
+        bmor.rombikusik(5);
     }
 }
